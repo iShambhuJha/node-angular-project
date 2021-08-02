@@ -1,0 +1,39 @@
+<div *ngIf="loading" class="loading-text">
+  Loading Driver Details...
+</div>
+<div class="map" id="map" class="match-parent"></div>
+<mat-card
+  class="secondary-background-color driver-card"
+  *ngFor="let driver of allDrivers; trackBy: trackByDriverName"
+>
+  <mat-card-header>
+    <mat-card-title class="card-title">{{ driver.driverName }}</mat-card-title>
+    <mat-card-subtitle class="card-subtitle" id='driver-gender'>{{
+      driver.driverGender | titlecase
+    }}</mat-card-subtitle>
+    <mat-card-subtitle class="card-subtitle" id='driver-phone'>{{
+      driver.driverPhone
+    }}</mat-card-subtitle>
+  </mat-card-header>
+  <mat-card-content>
+    <hr />
+    <div>
+      <img
+        mat-card-image
+        [src]="driver.driverGender == 'male' ? userPicMale : userPicFemale"
+        alt="user_profile_pic"
+      />
+    </div>
+    <hr />
+  </mat-card-content>
+  <mat-chip-list>
+    <mat-chip class="actualLocation" matTooltip="Actual location"
+      >Actual location : {{ driver.location[0] }} ,
+      {{ driver.location[1] }}</mat-chip
+    >
+    <mat-chip class="lastLocation" matTooltip="Last location"
+      >Last location : {{ driver.prev_loc[0] }},
+      {{ driver.prev_loc[1] }}</mat-chip
+    >
+  </mat-chip-list>
+</mat-card>

@@ -1,0 +1,39 @@
+*{
+  color: #FFFFFF;
+  font-family: 'Times New Roman', serif;
+  width: 100%;
+}
+.driver-card{
+  display: inline-block;
+  border-radius: 15px;
+  margin: 1em;
+  width:19vw;
+  border-right: 4px solid #f85149 !important;
+}
+.secondary-background-color{
+  background-color: #0D1117;
+  border: 1px solid #30363d;
+}
+.card-title{
+  font-size: 22px !important;
+  color: #4285F4;
+}
+.card-subtitle{
+  font-size: 14px !important;
+  color: #B7B8BA;
+}
+.lastLocation{
+  border: 2px solid #F9826C;
+  background-color: transparent;
+}
+.actualLocation{
+  border: 2px solid #238636;
+  background-color: transparent;
+}
+.loading-text{
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  padding: 10% 0;
+  font-size: 30px;
+}
